@@ -23,7 +23,7 @@ $('.copy').forEach(b=>b.onclick=async()=>{
 
 // hero terminal: types commands, prints output, loops
 const term=document.getElementById('term'),
-script=[['$ git clone https://github.com/itzme4/TUI_AI.git','k'],['$ pip install -e .','k'],['$ tui-ai','k'],
+script=[['$ git clone https://github.com/itzme4/TUI_AI.git','k'],['$ pip install -r requirements.txt','k'],['cd src','k'],['$ python -m tui-ai','k'],
         ['Welcome to TUI AI  ◇ offline and online ◇','o'],['Jarvis: Good evening! How can I help?','a'],
         ['Ravi: explain python in one line','k'],['Jarvis: A readable, general-purpose language.','a']];
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
