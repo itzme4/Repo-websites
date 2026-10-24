@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TUI AI | An AI assistant inside your terminal</title>
+<meta name="description" content="TUI AI is a Textual-based terminal app to chat with Groq and Gemini. Offline Ollama models coming soon.">
+<meta property="og:title" content="TUI AI"><meta property="og:description" content="An AI assistant inside your terminal."><meta property="og:image" content="assets/main_screen.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.85em' font-size='80'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className='js'</script>
+</head>
+<body>
+<div id="bar"></div><div class="glow"></div>
+<nav><div class="wrap">
+  <a class="logo" href="#top">&gt;_ TUI<b>AI</b></a>
+  <ul><li><a href="#features">Features</a></li><li><a href="#demo">Demo</a></li><li><a href="#install">Install</a></li><li><a href="#roadmap">Roadmap</a></li></ul>
+  <div class="nr">
+    <a class="si" href="https://github.com/itzme4" title="GitHub @itzme4"><img src="assets/github.svg" alt="GitHub"><span>@itzme4</span></a>
+    <a class="si" href="https://instagram.com/_itzme_4" title="Instagram @_itzme_4"><img src="assets/instagram.svg" alt="Instagram"><span>@_itzme_4</span></a>
+    <a class="btn" href="https://github.com/itzme4/TUI_AI">★ Repo</a>
+  </div>
+</div></nav>
+
+<header class="wrap hero" id="top">
+  <div>
+    <p class="chip">v0.1 alpha · Python 3.12+</p>
+    <h1>An AI assistant that lives <span class="grad">in your terminal.</span></h1>
+    <p class="sub">Chat with Groq or Gemini from a fast, keyboard-driven Textual interface. Offline models with Ollama are coming soon.</p>
+    <p class="cta"><a class="btn p" href="#install">Get started</a> <a class="btn" href="https://github.com/itzme4/TUI_AI">View source</a></p>
+  </div>
+  <div class="term"><div class="bar"><i></i><i></i><i></i><span>tui-ai ~/terminal</span></div><pre id="term"></pre></div>
+</header>
+
+<section id="features" class="wrap">
+  <h2 class="rv">Features</h2>
+  <div class="cards">
+    <article class="card rv"><b>⚡</b><h3>Never freezes</h3><p>Replies load in a background thread, so the UI stays smooth while the AI thinks.</p></article>
+    <article class="card rv" style="--d:.1s"><b>☁</b><h3>Groq &amp; Gemini</h3><p>Pick a provider and model once; switch any time from a simple config file.</p></article>
+    <article class="card rv" style="--d:.2s"><b>✔</b><h3>Guided onboarding</h3><p>First run asks for your details and API key, validates every field, then drops you into chat.</p></article>
+    <article class="card rv"><b>▣</b><h3>Live status bar</h3><p>CPU, RAM, battery, time and date, always visible at the top.</p></article>
+    <article class="card rv" style="--d:.1s"><b>🔒</b><h3>Private by design</h3><p>Keys stay in a per-user <code>.env</code> with owner-only permissions. Nothing is sent anywhere but your chosen provider.</p></article>
+    <article class="card rv" style="--d:.2s"><b>◇</b><h3>Offline soon</h3><p>Local models through Ollama are on the roadmap, plus an online-or-offline hybrid mode.</p></article>
+  </div>
+</section>
+
+<section id="demo" class="wrap tabset">
+  <h2 class="rv">See it in action</h2>
+  <div class="shot rv"><img src="assets/chat-demo.svg" alt="Animated chat demo" loading="lazy"></div>
+  <div class="tabs rv"><button class="on">Welcome</button><button>Onboarding</button><button>Main screen</button></div>
+  <div class="shot rv">
+    <img class="pane on" src="assets/welcome_screen.png" alt="Welcome screen" loading="lazy">
+    <img class="pane" src="assets/onboarding_screen.png" alt="Onboarding screen" loading="lazy">
+    <img class="pane" src="assets/main_screen.png" alt="Main screen with a chat" loading="lazy">
+  </div>
+</section>
+
+<section id="install" class="wrap">
+  <h2 class="rv">Install from source</h2>
+  <div class="code rv"><button class="copy">copy</button><pre>git clone https://github.com/itzme4/TUI_AI.git
+cd TUI_AI
+python -m venv .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
+pip install -e .
+tui-ai</pre></div>
+  <p class="note rv">Needs Python 3.12+ and a free <a href="https://console.groq.com/keys">Groq</a> or <a href="https://aistudio.google.com/app/apikey">Gemini</a> API key. Run <code>tui-ai --config-dir</code> to see where your settings live.</p>
+</section>
+
+<section id="roadmap" class="wrap">
+  <h2 class="rv">Roadmap</h2>
+  <img class="prog rv" src="assets/progress.svg" alt="Estimated progress" loading="lazy">
+  <div class="road">
+    <div class="ph now rv"><h3>1 · Foundation</h3><em>in progress</em><ul><li>Welcome + onboarding</li><li>Main screen + status bar</li><li>Groq &amp; Gemini chat</li></ul></div>
+    <div class="ph rv" style="--d:.1s"><h3>2 · Smarter chat</h3><em>next</em><ul><li>Conversation memory</li><li>Saved history</li><li>Streaming + Markdown</li></ul></div>
+    <div class="ph rv" style="--d:.2s"><h3>3 · Offline</h3><em>planned</em><ul><li>Ollama models</li><li>Hybrid mode</li><li>Model picker</li></ul></div>
+    <div class="ph rv" style="--d:.3s"><h3>4 · Tools</h3><em>planned</em><ul><li>TODO, web search, weather</li><li>Open apps and files</li><li>System commands</li></ul></div>
+    <div class="ph rv" style="--d:.4s"><h3>5 · Polish</h3><em>planned</em><ul><li>Themes</li><li>Automated tests</li><li>PyPI release</li></ul></div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>Built by <b>ITZME 4</b> with Textual, Groq and Gemini.</span>
+  <span class="soc">
+    <a href="https://github.com/itzme4/TUI_AI">Repo: itzme4/TUI_AI</a> ·
+    <a href="https://github.com/itzme4">GitHub @itzme4</a> ·
+    <a href="https://instagram.com/_itzme_4">Instagram @_itzme_4</a> ·
+    <a href="https://github.com/itzme4/TUI_AI/blob/main/CHANGELOG.md">Changelog</a>
+  </span>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
